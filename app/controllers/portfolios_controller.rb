@@ -50,4 +50,8 @@ class PortfoliosController < ApplicationController
       format.html { redirect_to portfolios_url, notice: 'Record was removed.' }
     end
   end
+  
+  def angular
+    @angular_portfolio_items = Portfolio.angular
+  end
 end
