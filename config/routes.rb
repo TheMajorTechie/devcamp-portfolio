@@ -8,6 +8,8 @@ Rails.application.routes.draw do
   get 'contact', to: 'pages#contact'
   
   get 'angular-items', to: 'portfolios#angular'
+  
+  get 'home', to: 'pages#home'
 
   resources :blogs do
     member do
