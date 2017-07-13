@@ -17,6 +17,6 @@ module ApplicationHelper
   end
   
   def copyright_generator
-    @copyright = DevcampViewTool::Renderer.copyright 'Vincent', 'All rights reserved'
+    @copyright = VincentViewTool::Renderer.copyright 'Vincent', 'All rights reserved'
   end
 end
