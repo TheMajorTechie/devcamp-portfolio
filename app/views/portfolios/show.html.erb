@@ -1,18 +1,29 @@
-<h1>Show</h1>
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <%= image_tag @portfolio_item.main_image %>
+    </div>
+    
+    <div class="col-md-5">
+      <h1><%= @portfolio_item.title %></h1>
+      
+      <em><%= @portfolio_item.subtitle %></em>
+      <hr>
+      <p><%= @portfolio_item.body %></p>
+      <hr>
+      <h3>Technologies Used:</h3>
+      
+      <% @portfolio_item.technologies.each do |t| %>
+      <p><%= t.name %></p>
+      <% end %>
+      
+      <hr>
+      <br>
+      <p align="right"><%= link_to "Back", portfolios_path, class: 'btn btn-primary' %></p>
+    </div>
+  </div>
+</div>
+
+<!---<h1>Show</h1>
 <%= @portfolio_item.inspect %>
-
-<%= image_tag @portfolio_item.main_image %>
-
-<h1><%= @portfolio_item.title %></h1>
-
-<em><%= @portfolio_item.subtitle %></em>
-
-<p><%= @portfolio_item.body %></p>
-
-<h2>Technologies Used:</h2>
-
-<% @portfolio_item.technologies.each do |t| %>
-<p><%= t.name %></p>
-<% end %>
-
-<hr>
+-->
