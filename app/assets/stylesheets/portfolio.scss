@@ -1,6 +1,8 @@
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap";
 @import "jquery-ui";
+
+
 body {
   min-height: 75rem; /* Can be removed; just added for demo purposes */
 }
@@ -32,7 +34,7 @@ body {
   min-height: 50rem; /* Can be removed; just added for demo purposes */
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background-color: #f7f7f7;
+  background-color: #d6fff9;
 }
 
 .card {
@@ -41,6 +43,7 @@ body {
   padding: .75rem;
   margin-bottom: 2rem;
   border: 0;
+  background-color: #effff7;
 }
 
 .card > img {
