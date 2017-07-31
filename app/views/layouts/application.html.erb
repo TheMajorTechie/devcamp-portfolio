@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title><%= @page_title %></title>
     <%= csrf_meta_tags %>
-    
+
     <meta name="keywords" content="<%= @seo_keywords %>" />
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -13,27 +14,30 @@
   </head>
 
   <body>
-    
     <div class="site-wrapper">
-  
       <div class="site-wrapper-inner">
-    
         <div class="cover-container">
 
+          <%= video_tag(
+              'Dramatic Chipmunk.mp4',
+              id: 'background',
+              autoplay: true,
+              loop: true,
+              muted: true,
+              poster: 'pfudor.gif'
+            )
+            %>
+
           <%= render "shared/application_nav" %>
-      
-      
-          
-      
+
           <%= yield %>
-          
+
           <%= render "shared/application_footer" %>
-          
+
           <%= source_helper("application") %>
-          
+
         </div>
       </div>
     </div>
-    
   </body>
-</html> 
+</html>
