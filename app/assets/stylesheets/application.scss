@@ -32,7 +32,7 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #333;
+  /* background-color: #333; */
 }
 body {
   color: #fff;
@@ -168,6 +168,21 @@ body {
 * Custom styles
 */
 
+#background {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -100;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  background: image-url('potato.png') no-repeat;
+  background-size: cover;
+}
+
 .card-block {
   color: #21407f;
   text-align: left;
@@ -190,4 +205,8 @@ body {
 .app-nav span {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.app-footer {
+  color: #2c3b54;
 }
