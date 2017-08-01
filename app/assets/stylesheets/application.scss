@@ -2,6 +2,7 @@
 
 // Custom bootstrap variables must be set or imported *before* bootstrap.
 @import "bootstrap"; 
+@import "gritter";
 
 /*
  * Globals
@@ -103,7 +104,8 @@ body {
     float: left;
   }
   .nav-masthead {
-    float: right;
+    float: center;
+    padding: 0rem 5.5rem;
   }
 }
 

@@ -34,6 +34,13 @@
 --->
 
 <%= form_for(@portfolio_item) do |f| %>
+
+  <% if @portfolio_item.errors.any? %>
+    <% @portfolio_item.errors.full_messages.each do |error| %>
+      <%= js add_gritter(error, title: "THE GREAT INTERWEBZ SAYS:", sticky: false, time: 5000,) %>
+    <% end %>
+  <% end %>  
+  
   <div class="row">
     <div class="col-md-6">
       <div class="form-group">
@@ -88,6 +95,6 @@
       <%= f.submit 'Save Portfolio Item', class: 'btn btn-success btn-block' %>
     </div>
     
-    <p align="right"><%= link_to "Cancel", portfolio_show_path, class: 'btn btn-primary' %></p>
+    <p align="right"><%= link_to "Cancel", @portfolio_show_path, class: 'btn btn-primary' %></p>
   </div>
 <% end %>
