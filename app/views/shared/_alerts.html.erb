@@ -1,9 +1,0 @@
-<% if flash[:alert] %>
-  <%= js add_gritter(flash[:alert], title: "THE GREAT INTERWEBZ SAYS:", sticky: false, time: 5000,) %>
-
-<% elsif flash[:error] %>
-  <%= js add_gritter(flash[:error], title: "THE GREAT INTERWEBZ SAYS:", sticky: false, time: 5000,) %>
-
-<% else %>
-  <%= js add_gritter(flash[:notice], title: "THE GREAT INTERWEBZ SAYS:", sticky: false, time: 5000,) %>
-<% end %>  
