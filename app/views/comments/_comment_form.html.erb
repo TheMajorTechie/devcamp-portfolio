@@ -1,0 +1,15 @@
+<% unless current_user.is_a? GuestUser %>
+  <% if @comment.errors.any? %>
+      <% @comment.errors.full_messages.each do |error| %>
+        <%= alert_generator error %>
+      <% end %>
+    <% end %>
+    <%= form_for @comment, url: '#' do |f| %>
+        <div class:"form-group">
+            <%= f.label :content %>
+            <%= f.text_area :content, class: 'form-control' %>
+        </div>
+        
+        <%= f.submit 'Post Comment', class: 'btn btn-success' %>
+    <% end %>
+<% end %>
