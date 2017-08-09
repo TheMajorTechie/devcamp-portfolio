@@ -11,3 +11,4 @@ Rails.application.config.assets.version = '1.0'
 # Rails.application.config.assets.precompile += %w( search.js )
 Rails.application.config.assets.precompile += %w( blog.scss )
 Rails.application.config.assets.precompile += %w( portfolio.scss )
+Rails.application.config.assets.precompile += %w( topics.css )
