@@ -8,11 +8,20 @@
         <a <%= link_to fa_icon('trash-o'), @blog, method: :delete, data: { confirm: 'Are you sure?' }, class:"breadcrumb-item btn btn-danger" if logged_in?(:site_admin) %></a>
     </nav>
     
+    
+    
     <p><%= markdown @blog.body %></p>
+    
+    <hr>
+    
+    <h1>Comments</h1>
+    
+    <%= render @blog.comments %>
+    
 
     <div id="comments" data-blog-id="<%= @blog.id %>">
         <%= render 'comments/comment_form' %>
     </div>
     
-    <%= render @blog.comments %>
+    
 </div>
