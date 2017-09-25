@@ -212,3 +212,18 @@ body {
 .app-footer {
   color: #2c3b54;
 }
+
+.app-card-container {
+  color: black;
+  text-align: left;
+}
+
+.app-card-container > .card {
+  opacity: .75;
+  padding: 10px;
+  background: #c4c4c4;
+}
+
+.cover-heading{
+  font-family: 'Open Sans', sans-serif;
+}

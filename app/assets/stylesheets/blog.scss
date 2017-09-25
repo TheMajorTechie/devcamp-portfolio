@@ -190,6 +190,10 @@ h6, .h6 {
   
 }
 
+.CommentBody {
+  padding: 10px;
+}
+
 .CommentUserInfo {
   font-size: 10px;
 }
@@ -197,4 +201,12 @@ h6, .h6 {
 .sidebar-placeholder {
   padding: 5px;
   font-size: 10px;
+}
+
+.cover-heading{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.cover-body {
+  font-family: 'Roboto', sans-serif;
 }

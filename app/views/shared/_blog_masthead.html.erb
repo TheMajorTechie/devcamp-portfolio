@@ -1,7 +1,9 @@
 <div class="blog-header">
   <div class="container">
-    <h1 class="blog-title">My Blog</h1>
-    <p class="lead blog-description">An example blog template built with Bootstrap.</p>
-    <%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %>
+    <h1 class="blog-title cover-heading">Just another blog.</h1>
+    <p class="lead blog-description cover-body">Oh, you KNOW what's coming...</p>
+    <span class="btn btn-secondary"><%= link_to 'Write a New Blog', new_blog_path if logged_in?(:site_admin) %></span>
+    <!--<a href="https://devcamp-themajortechie.c9users.io/topics">Topics</a>-->
+    <span class="btn btn-secondary"><%= link_to "Topics", topics_path %></span>
   </div>
 </div>

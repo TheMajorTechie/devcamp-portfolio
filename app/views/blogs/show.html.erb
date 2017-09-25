@@ -1,17 +1,27 @@
 <div class="col-sm-8 blog-main">
 
     <h2><%= @blog.title %></h2>
-
-    <%= link_to 'Edit', edit_blog_path(@blog) if logged_in?(:site_admin) %> |
-    <%= link_to 'Back', blogs_path %>
-
-    <p><%= @blog.body %></p>
-
+    <nav class="breadcrumb", align="right">
+        <a <%= link_to fa_icon('pencil-square-o'), edit_blog_path, class:"breadcrumb-item btn btn-primary" if logged_in?(:site_admin) %></a>
+        <a class="btn btn-info" <%= link_to @blog.topic.title, topic_path(@blog.topic), class:"breadcrumb-item" %></a>
+        <a class="btn btn-default" <%= link_to fa_icon('arrow-left') + " Back", blogs_path, class:"breadcrumb-item" %></a>
+        <a <%= link_to fa_icon('trash-o'), @blog, method: :delete, data: { confirm: 'Are you sure?' }, class:"breadcrumb-item btn btn-danger" if logged_in?(:site_admin) %></a>
+    </nav>
     
     
+    
+    <p><%= markdown @blog.body %></p>
+    
+    <hr>
+    
+    <h1>Comments</h1>
+    
+    <%= render @blog.comments %>
+    
+
     <div id="comments" data-blog-id="<%= @blog.id %>">
         <%= render 'comments/comment_form' %>
     </div>
     
-    <%= render @blog.comments %>
+    
 </div>
