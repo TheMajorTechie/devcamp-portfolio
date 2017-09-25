@@ -1,5 +1,5 @@
   <div class="blog-post">
-    <h2 class="blog-post-title"><%= link_to blog.title.upcase, blog %></h2>
+    <h2 class="blog-post-title cover-heading"><%= link_to blog.title.upcase, blog %></h2>
     <p class="blog-post-meta">Published <%= distance_of_time_in_words(blog.created_at, Time.now) %> ago.</p>
     <p class="blog-post-meta">
       
@@ -11,7 +11,9 @@
       </p>
     </p>
       <% end %>
-    <p><%= blog.body %></p>
+    <div class="cover-body">
+      <p><%= blog.body %></p>
+    </div>
     
   </div><!-- /.blog-post -->
 
